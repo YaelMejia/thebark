@@ -46,7 +46,7 @@ $(".slider").slick({
 const slider = $(".slider-item");
 slider
   .slick({
-    dots: false
+    dots: true
   });
 
 slider.on('wheel', (function(e) {
