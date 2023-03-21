@@ -1,0 +1,104 @@
+.container{
+    background: linear-gradient(rgba(0, 3, 10, 0.85),rgba(0, 3, 10, 0.85)), url('assets/images/home.jpg') center center / cover;
+}
+.HomeNav{
+    background-color: rgba(21, 38, 71, 0);
+}
+.name{
+    display: none;
+}
+@media screen and (max-width: 768px){
+    body {
+        overflow-x: hidden;
+    }
+    .HomeNav{
+        justify-content: right;
+    }
+}
+.series{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height: 72vh;
+}
+.slider .item{
+    padding: 15px;
+    outline: none;
+    max-width: calc(80vw * var(--aspectRatio));
+}
+.slider .item-inner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    border-radius: 25px;
+    text-align: center;
+    padding: 25px;
+    height: 35vh;
+    max-width: 85%;
+    margin: 0 auto;
+    z-index: 75;
+}
+.aniBG{
+    background: url(assets/images/rainbow.webp);
+}
+.NinBG{
+    background: url(assets//images/breath.webp);
+}
+.casBG{
+    background: url(assets//images/casual.webp);
+}
+.yelBG{
+    background: url(assets//images/yel.webp);
+}
+.befBG{
+    background: url(assets//images/time.webp);
+}
+.weeBG{
+    background: url(assets//images/nichej.webp);
+}
+.slider .item-inner::before{
+    content:"";
+    position: absolute;
+    border-radius: 25px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.45);
+    z-index: 76;
+}
+.item-inner h4{
+    font-size: 3.5rem;
+    color: #fff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-transform: capitalize;
+    z-index:77;
+}
+.item-inner p{
+    font-size: 1.5rem;
+    color: #fff;
+    letter-spacing: 1px;
+    z-index: 77;
+}
+.slick-slide{
+    transform: scale(0.8);
+    opacity: 0.3;
+    transition: all ease 0.5s;
+}
+.slick-slide.slick-current{
+    transform: scale(1);
+    opacity: 1;
+}
+.slick-slider{
+    max-width: calc(100vh * var(--aspectRatio))
+}
+a{
+    list-style: none;
+    text-decoration: none;
+    color: #fff;
+    z-index:77;
+}
