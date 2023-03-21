@@ -42,3 +42,19 @@ $(".slider").slick({
     verticalSwiping: true,
     cssEase: 'cubic-bezier(0.250, 0.460, 0.450, 0.940)'
   })
+
+const slider = $(".slider-item");
+slider
+  .slick({
+    dots: false
+  });
+
+slider.on('wheel', (function(e) {
+  e.preventDefault();
+
+  if (e.originalEvent.deltaY < 0) {
+    $(this).slick('slickNext');
+  } else {
+    $(this).slick('slickPrev');
+  }
+}));
