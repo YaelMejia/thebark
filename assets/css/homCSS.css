@@ -1,0 +1,40 @@
+.HomeTitle {
+    width: 90%;
+    color:#fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 75;
+}
+/* Responsive Subtitle */
+
+.HomeTitle p{
+    font-size: 20px;
+  }
+  @media screen and (min-width: 320px) {
+      .HomeTitle p {
+      font-size: calc(20px + 8 * ((100vw - 320px) / 480));
+    }
+  }
+  @media screen and (min-width: 800px) {
+      .HomeTitle p {
+      font-size: 28px;
+    }
+  }
+  
+  /* Responsive Heading */
+  .HomeTitle h1{
+    font-size: 40px;
+  }
+  @media screen and (min-width: 320px) {
+      .HomeTitle h1 {
+      font-size: calc(40px + 30 * ((100vw - 320px) / 480));
+    }
+  }
+  @media screen and (min-width: 800px) {
+    .HomeTitle h1 {
+      font-size: 70px;
+    }
+  }
