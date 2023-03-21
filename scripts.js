@@ -42,3 +42,27 @@ $(".slider").slick({
     verticalSwiping: true,
     cssEase: 'cubic-bezier(0.250, 0.460, 0.450, 0.940)'
   })
+
+var slider = $(".slider-item");
+var scrollCount = null;
+var scroll= null;
+
+slider
+    .slick({
+        dots: true
+    });
+
+slider.on('wheel', (function(e) {
+    e.preventDefault();
+
+    clearTimeout(scroll);
+    scroll = setTimeout(function(){scrollCount=0;}, 200);
+    if(scrollCount) return 0;
+    scrollCount=1;
+
+    if (e.originalEvent.deltaY < 0) {
+        $(this).slick('slickNext');
+    } else {
+        $(this).slick('slickPrev');
+    }
+}));
